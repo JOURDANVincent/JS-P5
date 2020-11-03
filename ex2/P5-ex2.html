@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Partie 5 - ex2</title>
+    <link rel="stylesheet" href="ex2.css">
+
+</head>
+<body>
+    
+    <form >
+        <div>
+            <label for="mdp">Entrer mot de passe</label> :<input type="password" name="mdp" id="mdp" required>
+        </div>
+        <div>
+            <label for="mdpc">Confirmer mot de passe</label> :<input type="password" name="mdpc" id="mdpc" required>
+        </div>
+        <div>
+            <input type="button" onclick="validate()" value="valider">
+        </div>
+    </form>
+
+    <script type="text/javascript">
+
+        function validate() {
+        
+        let oa = document.getElementById("mdp");
+        let a = oa.value;
+        let ob = document.getElementById("mdpc")
+        let b = ob.value;
+    
+        if (a!=b) {
+            oa.className = ob.className = 'redBorder';
+            }
+        else {
+            oa.className = ob.className = 'greenBorder';
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
