@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Partie 5 - ex1</title>
+
+</head>
+<body>
+    
+    <form onSubmit="return validate()">
+        <div>
+            <label for="mdp">Entrer mot de passe</label> :<input type="password" name="mdp" id="mdp" required>
+        </div>
+        <div>
+            <label for="mdp2">Confirmer mot de passe</label> :<input type="password" name="mdp2" id="mdp2" required>
+        </div>
+        <div>
+            <input type="button" onclick="validate()" value="valider">
+        </div>
+    </form>
+
+    <script>
+
+        function validate() {
+        
+        var a = document.getElementById("mdp").value;
+        var oa = document.getElementById("mdp");
+        var b = document.getElementById("mdp2").value;
+        var ob = document.getElementById("mdp2")
+    
+        if (a!=b) {
+            oa.style.borderColor="red";
+            ob.style.borderColor="red";
+            }
+        else {
+            oa.style.borderColor="green";
+            ob.style.borderColor="green";
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
