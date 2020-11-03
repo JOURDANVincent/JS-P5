@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>JS-P5 ex5</title>
+  </head>
+  <body>
+    <p id="para">
+      Python est un langage de programmation interprété, multi-paradigme et multiplateformes. Il favorise la programmation impérative structurée, fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une gestion automatique de la mémoire par ramasse-miettes et d'un système de gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk et Tcl. Le langage Python est placé sous une licence libre proche de la licence BSD et fonctionne sur la plupart des plates-formes informatiques, des smartphones aux ordinateurs centraux, de Windows à Unix avec notamment GNU/Linux en passant par macOS, ou encore Android, iOS, et peut aussi être traduit en Java ou .NET. Il est conçu pour optimiser la productivité des programmeurs en offrant des outils de haut niveau et une syntaxe simple à utiliser.
+      Il est également apprécié par certains pédagogues qui y trouvent un langage où la syntaxe, clairement séparée des mécanismes de bas niveau, permet une initiation aisée aux concepts de base de la programmation.
+    </p>
+    <button id="pink" type="button">Rose</button>
+    <button id="blue" type="button">Bleu</button>
+    <button id="violet" type="button">Violet</button>
+    <button id="bold" type="button">Gras</button>
+    <button id="ital" type="button">Italique</button>
+    
+</body>
+
+  <script type="text/javascript">
+
+    let lPara = document.getElementById("para");
+
+    let bPink = document.getElementById("pink");
+    bPink.addEventListener('click', ctPink);
+
+    let bBlue = document.getElementById("blue");
+    bBlue.addEventListener('click', ctBlue);
+
+    let bViolet = document.getElementById("violet");
+    bViolet.addEventListener('click', ctViolet);
+
+    let bBold = document.getElementById("bold");
+    bBold.addEventListener('click', ctBold);
+
+    let bItal = document.getElementById("ital");
+    bItal.addEventListener('click', ctItal);
+
+    function ctPink() {
+      lPara.style.backgroundColor = "pink";
+    }  
+
+    function ctBlue() {
+      lPara.style.backgroundColor = "blue";
+    }  
+
+    function ctViolet() {
+      lPara.style.backgroundColor = "violet";
+    }  
+
+    function ctBold() {
+      lPara.style.fontWeight = "bold";
+    }  
+
+    function ctItal() {
+      lPara.style.fontStyle = "italic";
+    }  
+
+  </script>
+
+</html>
