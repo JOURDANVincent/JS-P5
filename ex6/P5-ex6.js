@@ -8,15 +8,16 @@ bBlue.addEventListener('click', blueFocus);
 
 
 function pinkFocus() {
-  iPink.style.backgroundColor = "pink";
-  iBlue.style.backgroundColor = "none";
+  iPink.style.borderColor = "red";
+  iBlue.style.border = "none";
   document.getElementById("pinkname").focus();
   document.getElementById("bluename").blur();
 }  
 
 
 function blueFocus() {
-  iBlue.style.backgroundColor = "blue";
+  iBlue.style.borderColor = "blue";
+  iPink.style.border = "none"
   document.getElementById("bluename").focus();
   document.getElementById("pinkname").blur();
 }  
