@@ -8,7 +8,7 @@ let vMail = new RegExp("[a-z]+@[a-z]+\.{1}fr");
 
 let iAge = document.getElementById("age");
 let missAge = document.getElementById("missAge");
-let vAge = new RegExp("[0-9]");
+let vAge = new RegExp("[0-9]{,2}");
 
 iName.addEventListener('input', checkName);
 iMail.addEventListener('input', checkMail);
@@ -19,8 +19,14 @@ function checkName(){
         missName.textContent = 'Champ obligatoire';
         missName.style.backgroundColor = "red";
     } else if (vName.test(iName.value) == false) {
-        missName.textContent = 'Ce champ ne doit contenir que des lettres'
+        missName.textContent = 'Ce champ ne doit contenir que des lettres ...!';
         missName.style.backgroundColor = "red";
+    } else if (iName.value.length < 3){
+        missName.textContent = 'Ce champ doit contenir 3 caractères minimum ...!';
+        missName.style.backgroundColor = "orange";
+    } else {
+        missName.textContent = 'Correct';
+        missName.style.backgroundColor = "green";
     }
 }
 
@@ -33,6 +39,7 @@ function checkMail(){
         missMail.style.backgroundColor = "red";
     }
     else {
+        missMail.textContent = 'Correct';
         missMail.style.backgroundColor = "green";
     }
 }
@@ -43,16 +50,27 @@ function checkAge(){
         missAge.style.backgroundColor = "red";
     }
     else if (vAge.test(iAge.value) == false) {
-        missAge.textContent = 'Ce champ ne doit contenir que des chiffres'
-        missAge.style.backgroundColor = "orange";
-        } 
-    else if(iAge.value <= 0 | iAge.value >= 130){
+        if (iAge.value.length > 3) {
+            missAge.textContent = '3 caractères maximumu autorisé !!!'
+            missAge.style.backgroundColor = "orange";
+        } else if (iAge.value == 0){
+            missAge.textContent = 'Ne pas commencer par un 0 !!!!'
+            missAge.style.backgroundColor = "orange";
+        } else if (iAge.value > 0){
+            missAge.textContent = ''
+            missAge.style.backgroundColor = "none";
+        } else {
+            missAge.textContent = 'Ce champ ne doit contenir que des chiffres'
+            missAge.style.backgroundColor = "red";
+        }
+    } else if(iAge.value <= 0 | iAge.value >= 130){
         missAge.textContent = "Ton age doit être compris entre 0 et 130";
         missAge.style.backgroundColor = "yellow";
-        }
+    }
     else {
         missAge.style.backgroundColor = "green";
         missAge.textContent = 'Correct';
     }
+    
 }
 
