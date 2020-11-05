@@ -1,6 +1,6 @@
 let iName = document.getElementById("name");
 let missName = document.getElementById("missName");
-let vName = new RegExp("[a-zA-Z]","i");
+let vName = new RegExp("[a-zA-Z]+");
 
 let iMail = document.getElementById("mail");
 let missMail = document.getElementById("missMail");
@@ -8,7 +8,7 @@ let vMail = new RegExp("[a-z]+@[a-z]+\.{1}fr");
 
 let iAge = document.getElementById("age");
 let missAge = document.getElementById("missAge");
-let vAge = new RegExp("[0-9]{,2}");
+let vAge = new RegExp("[0-9]{,3}");
 
 iName.addEventListener('input', checkName);
 iMail.addEventListener('input', checkMail);
@@ -52,9 +52,6 @@ function checkAge(){
     else if (vAge.test(iAge.value) == false) {
         if (iAge.value.length > 3) {
             missAge.textContent = '3 caractères maximumu autorisé !!!'
-            missAge.style.backgroundColor = "orange";
-        } else if (iAge.value == 0){
-            missAge.textContent = 'Ne pas commencer par un 0 !!!!'
             missAge.style.backgroundColor = "orange";
         } else if (iAge.value > 0){
             missAge.textContent = ''
