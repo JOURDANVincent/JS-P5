@@ -1,6 +1,6 @@
 let iName = document.getElementById("name");
 let missName = document.getElementById("missName");
-let vName = new RegExp("[a-zA-Z]+");
+let vName = new RegExp("[a-z]+");
 
 let iMail = document.getElementById("mail");
 let missMail = document.getElementById("missMail");

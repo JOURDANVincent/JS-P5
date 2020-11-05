@@ -1,23 +1,21 @@
-let bPink = document.getElementById("pink");
 let iPink = document.getElementById("pinkname");
-bPink.addEventListener('click', pinkFocus);
+iPink.addEventListener('click', pinkFocus);
 
-let bBlue = document.getElementById("blue");
 let iBlue = document.getElementById("bluename");
-bBlue.addEventListener('click', blueFocus);
+iBlue.addEventListener('click', blueFocus);
 
 
 function pinkFocus() {
-  iPink.style.borderColor = "red";
-  iBlue.style.border = "none";
-  document.getElementById("pinkname").focus();
-  document.getElementById("bluename").blur();
+  iPink.style.outlineColor = "red";
+  iBlue.style.outlineColor = "none";
+  iPink.focus();
+  iBlue.blur();
 }  
 
 
 function blueFocus() {
-  iBlue.style.borderColor = "blue";
-  iPink.style.border = "none";
-  document.getElementById("bluename").focus();
-  document.getElementById("pinkname").blur();
+  iBlue.style.outlineColor = "blue";
+  iPink.style.outlineColor = "none";
+  iBlue.focus();
+  iPink.blur();
 }  
