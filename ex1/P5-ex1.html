@@ -7,38 +7,23 @@
 </head>
 <body>
     
-    <form onSubmit="return validate()">
+    <form>
+
         <div>
-            <label for="mdp">Entrer mot de passe</label> :<input type="password" name="mdp" id="mdp" required>
+            <label for="mdp">Entrer mot de passe</label>
+            <input type="password" name="mdp" id="mdp" required>
         </div>
         <div>
-            <label for="mdp2">Confirmer mot de passe</label> :<input type="password" name="mdp2" id="mdp2" required>
+            <label for="mdpc">Confirmer mot de passe</label>
+            <input type="password" name="mdpc" id="mdpc" required>
         </div>
         <div>
-            <input type="button" onclick="validate()" value="valider">
+            <input type="button" value="Envoyer" onclick="validate();">
         </div>
+
     </form>
 
-    <script>
-
-        function validate() {
-        
-        var a = document.getElementById("mdp").value;
-        var oa = document.getElementById("mdp");
-        var b = document.getElementById("mdp2").value;
-        var ob = document.getElementById("mdp2")
-    
-        if (a!=b) {
-            oa.style.borderColor="red";
-            ob.style.borderColor="red";
-            }
-        else {
-            oa.style.borderColor="green";
-            ob.style.borderColor="green";
-            }
-        }
-    
-    </script>
+    <script src="assets/js/P5-ex1.js"></script>
 
 </body>
 </html>
