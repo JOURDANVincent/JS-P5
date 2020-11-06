@@ -1,14 +1,14 @@
 let iName = document.getElementById("name");
 let missName = document.getElementById("missName");
-let vName = new RegExp("[a-z]+");
+let vName = new RegExp(/^[a-z\-]+$/);
 
 let iMail = document.getElementById("mail");
 let missMail = document.getElementById("missMail");
-let vMail = new RegExp("[a-z]+@[a-z]+\.{1}fr");
+let vMail = new RegExp(/^[a-z]+@[a-z]+\.{1}fr/);
 
 let iAge = document.getElementById("age");
 let missAge = document.getElementById("missAge");
-let vAge = new RegExp("[0-9]{,3}");
+let vAge = new RegExp(/^[0-9]{,3}/);
 
 iName.addEventListener('input', checkName);
 iMail.addEventListener('input', checkMail);
