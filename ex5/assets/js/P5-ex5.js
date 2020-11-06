@@ -16,15 +16,15 @@ let bItal = document.getElementById("ital");
 bItal.addEventListener('click', ctItal);
 
 function ctPink() {
-  lPara.style.backgroundColor = "pink";
+  lPara.style.color = "pink";
 }  
 
 function ctBlue() {
-  lPara.style.backgroundColor = "blue";
+  lPara.style.color = "blue";
 }  
 
 function ctViolet() {
-  lPara.style.backgroundColor = "violet";
+  lPara.style.color = "violet";
 }  
 
 function ctBold() {
