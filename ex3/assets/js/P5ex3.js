@@ -1,10 +1,10 @@
 let iName = document.getElementById("name");
 let missName = document.getElementById("missName");
-let vName = new RegExp(/^[a-z\-]+$/);
+let vName = new RegExp(/^[A-Za-z\é\è\ê\ï\-]+$/);
 
 let iMail = document.getElementById("mail");
 let missMail = document.getElementById("missMail");
-let vMail = new RegExp(/^[a-z]+@[a-z]+\.{1}fr/);
+let vMail = new RegExp(/^[A-Za-z\é\è\ê\ï]+@[A-Za-z\é\è\ê\ï]+\.{1}fr/);
 
 let iAge = document.getElementById("age");
 let missAge = document.getElementById("missAge");

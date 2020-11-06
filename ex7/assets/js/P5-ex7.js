@@ -1,27 +1,28 @@
-
 let para = document.getElementById("para");
-window.addEventListener('scroll', zoom);
+para.addEventListener('scroll', zoom);
 
 function zoom () {
-    let x = window.scrollY;
-    let fs = x;
-    para.style.fontSize = "2px";
-    if(x > 50){
-        para.style.fontSize = "5px";
-    }  if (x>100){
-        para.style.fontSize = "10px";
-    } if (x>150){
-        para.style.fontSize = "15px";
-    } if (x>200){
-        para.style.fontSize = "20px";
-    } if (x>250){
-        para.style.fontSize = "25px";
-    } if (x>300){
-        para.style.fontSize = "30px";
-    } if (x>400){
-        para.style.fontSize = "35px";
-    } if (x>500){
-        para.style.fontSize = "40px";
+    let scroll_top = window.scrollY;
+    let last_scroll_top = 0;
+    let fsz = new String;
+
+    // calcul du dezoom
+    if(scroll_top < last_scroll_top) {
+        if (scroll_top < 16){
+            //valeur font-size minimum pour ne pas échapper possibilité de scroll
+            fsz = "16px";
+        } else{
+            // variable valeur du font-size en px
+            fsz = String (scroll_top + "px");
+        }  
     }
-    
+    // calcul du zoom
+    else if (scroll_top > last_scroll_top){
+        // variable valeur du font-size en px
+        fsz = String (scroll_top + "px");  
+    }
+    // Ajustement du font en fct scroll up/down
+    para.style.fontSize = fsz;
+    last_scroll_top = scroll_top;
+
 }

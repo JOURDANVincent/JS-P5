@@ -7,7 +7,7 @@ iBlue.addEventListener('click', blueFocus);
 
 function pinkFocus() {
   iPink.style.outlineColor = "red";
-  iBlue.style.outlineColor = "none";
+  iBlue.style.border = "none";
   iPink.focus();
   iBlue.blur();
 }  
@@ -15,7 +15,7 @@ function pinkFocus() {
 
 function blueFocus() {
   iBlue.style.outlineColor = "blue";
-  iPink.style.outlineColor = "none";
+  iPink.style.border = "none";
   iBlue.focus();
   iPink.blur();
 }  
