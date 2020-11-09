@@ -4,7 +4,7 @@ let regName = /^[A-Za-z\-]+$/;
 
 let iMail = document.getElementById("mail");
 let mMail = document.getElementById("missMail");
-let regMail =/^[A-Za-z]+@[A-Za-z\-]+\.{1}[a-z]{2,5}$/;
+let regMail =/^([A-Za-z0-9]+)@([A-Za-z0-9\-]+)\.{1}([a-z]{2,5})$/;
 
 let iAge = document.getElementById("age");
 let mAge = document.getElementById("missAge");
