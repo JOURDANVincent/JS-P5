@@ -1,5 +1,6 @@
 function validate() {
 
+    // récupération des éléments
     let mdp = document.getElementById("mdp");
     let mdpc = document.getElementById("mdpc")
 
