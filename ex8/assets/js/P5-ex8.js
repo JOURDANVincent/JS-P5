@@ -1,4 +1,4 @@
-function clone() {
+function cloneDiv() {
     cloneFirstName = document.getElementById("firstName").cloneNode(true);
     cloneAge = document.getElementById("age").cloneNode(true);
 
