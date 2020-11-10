@@ -8,10 +8,17 @@
 </head>
 <body>
     
-    <img id="wall" src="assets/img/nwall.jpg" alt="fond d'ecran au choix" 
-    onClick="document.getElementById('wall').src='assets/img/wall2.jpg'" 
-    onmouseover="this.width=1500; this.heigth=1500;" 
-    onmouseout="this.width=1000; this.heigth=1000"/>
+    <img id="wall" src="assets/img/nwall.jpg" width="160px" height="90px" alt="fond d'ecran au choix" 
+
+    onclick="imgChange();" 
+
+    onmouseover="imgUp();"
+
+    onmouseout="imgDown()"
+    
+    />
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
