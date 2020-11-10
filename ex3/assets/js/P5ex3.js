@@ -1,10 +1,10 @@
 let iName = document.getElementById("name");
 let missName = document.getElementById("missName");
-let vName = new RegExp(/^[A-Za-z\é\è\ê\ï\-]+$/);
+let vName = new RegExp(/^[a-z-]+$/);
 
 let iMail = document.getElementById("mail");
 let missMail = document.getElementById("missMail");
-let vMail = new RegExp(/^[A-Za-z0-9]+@[A-Za-z\é\è\ê\-]+\.{1}fr$/);
+let vMail = new RegExp(/^[\W-]+@[\W\é\è\ê\-]+\.[a-z]{2,5}$/);
 
 let iAge = document.getElementById("age");
 let missAge = document.getElementById("missAge");
@@ -16,51 +16,51 @@ iAge.addEventListener('input', checkAge);
 
 function checkName(){
     if (iName.validity.valueMissing) {
-        missName.textContent = 'Champ obligatoire';
+        missName.innerHTML = 'Champ obligatoire';
         missName.style.backgroundColor = "red";
     } else if (iName.value.length < 3){
-        missName.textContent = 'Ce champ doit contenir 3 caractères minimum ...!';
+        missName.innerHTML = 'Ce champ doit contenir 3 caractères minimum ...!';
         missName.style.backgroundColor = "orange";
     } else if (vName.test(iName.value) == false) {
-        missName.textContent = 'Ce champ ne doit contenir que des lettres ...!';
+        missName.innerHTML = 'Ce champ ne doit contenir que des lettres ...!';
         missName.style.backgroundColor = "red";
     } else {
-        missName.textContent = 'Correct';
+        missName.innerHTML = 'Correct';
         missName.style.backgroundColor = "green";
     }
 }
 
 function checkMail(){
     if (iMail.validity.valueMissing) {
-        missMail.textContent = 'Champ obligatoire';
+        missMail.innerHTML = 'Champ obligatoire';
         missMail.style.backgroundColor = "red";
     } else if (vMail.test(iMail.value) == false) {
-        missMail.textContent = 'Ce champ doit contenir élément du type: abc@cde.fr'
+        missMail.innerHTML = 'Ce champ doit contenir élément du type: abc@cde.fr'
         missMail.style.backgroundColor = "red";
     }
     else {
-        missMail.textContent = 'Correct';
+        missMail.innerHTML = 'Correct';
         missMail.style.backgroundColor = "green";
     }
 }
 
 function checkAge(){
     if (iAge.validity.valueMissing) {
-        missAge.textContent = 'Champ obligatoire';
+        missAge.innerHTML = 'Champ obligatoire';
         missAge.style.backgroundColor = "red";
     } else if(iAge.value <= 0 | iAge.value >= 130){
-        missAge.textContent = "Ton age doit être compris entre 0 et 130";
+        missAge.innerHTML = "Ton age doit être compris entre 0 et 130";
         missAge.style.backgroundColor = "yellow";
     } else if (iAge.value.length > 3) {
-        missAge.textContent = '3 caractères maximumu autorisé !!!'
+        missAge.innerHTML = '3 caractères maximumu autorisé !!!'
         missAge.style.backgroundColor = "orange";
     } else if (vAge.test(iAge.value) == false) {
-        missAge.textContent = 'Ce champ ne doit contenir que des chiffres'
+        missAge.innerHTML = 'Ce champ ne doit contenir que des chiffres'
         missAge.style.backgroundColor = "red";
     }
     else {
         missAge.style.backgroundColor = "green";
-        missAge.textContent = 'Correct';
+        missAge.innerHTML = 'Correct';
     }
     
 }
