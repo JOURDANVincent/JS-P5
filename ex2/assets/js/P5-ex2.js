@@ -5,12 +5,12 @@ function validate() {
     let mdpc = document.getElementById("mdpc")
 
     if (mdp.value === mdpc.value) {
-        mdp.classList.add('greenBorder').remove('redBorder');
-        mdpc.classList.add('greenBorder').remove('redBorder');
+        mdp.classList.add('greenBorder');
+        mdpc.classList.add('greenBorder');
     }
     else {
-        mdp.classList.add('redBorder').remove('greenBorder');
-        mdpc.classList.add('redBorder').remove('greenBorder');
+        mdp.classList.add('redBorder');
+        mdpc.classList.add('redBorder');
     }
 
 }

@@ -1,6 +1,8 @@
 .greenBorder {
     border-color: green;
+    background-color: green;
 }
 .redBorder {
     border-color: red;
+    background-color: red;
 }
